@@ -1,4 +1,9 @@
 /* Basic Styles */
+:root {
+  --accent-color: coral;
+  --section-margin: 2.5rem auto;
+}
+
 *,
 *::before,
 *::after {
@@ -22,11 +27,18 @@ body {
 }
 
 section {
-  margin: 2rem auto;
+  margin: var(--section-margin);
 }
 
 ul {
   list-style-type: none;
+}
+
+/* --------------------------- Utilities ----------------------------- */
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* --------------------------- Header ----------------------------- */
@@ -36,6 +48,7 @@ ul {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
+
 .header__banner {
   width: 100%;
   object-fit: cover;
@@ -45,23 +58,35 @@ ul {
 
 /* --------------------------- Recipe Details ----------------------------- */
 
-.recipe__title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
 .recipe__details {
   display: flex;
   gap: 1rem;
 }
+
 .recipe__detail {
   flex: 1 1 33%;
-  background-color: coral;
+  background-color: var(--accent-color);
   border-radius: 10px;
   padding: 1.5rem;
 }
+
 .recipe__detail-type {
   margin-bottom: 0.5rem;
 }
+
 .recipe__detail-time {
   font-weight: bold;
+}
+
+/* --------------------------- Recipe Ingredients ----------------------------- */
+
+.recipe__ingredient-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.recipe__ingredient-note {
+  color: var(--accent-color);
+  font-size: 1.4rem;
 }
