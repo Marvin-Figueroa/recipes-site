@@ -96,7 +96,7 @@ ul {
 /* --------------------------- Recipe Instructions ----------------------------- */
 
 .recipe__instruction-list {
-  padding-left: 1.5rem;
+  padding-left: 1.8rem;
   list-style-type: decimal;
   display: flex;
   flex-direction: column;
@@ -119,4 +119,99 @@ ul {
 .recipe__nutrition-label {
   color: var(--accent-color);
   font-weight: bold;
+}
+
+/* --------------------------- Media Queries ----------------------------- */
+
+@media (min-width: 700px) {
+  :root {
+    --section-margin: 1.5rem auto;
+  }
+
+  body {
+    padding: 3rem;
+  }
+
+  .header__banner {
+    height: 30rem;
+  }
+
+  .recipe {
+    display: grid;
+    grid-template-areas: "info info" "ingredients nutrition" "instructions instructions";
+    grid-template-columns: 50% 50%;
+    gap: 0;
+  }
+
+  .recipe__info {
+    grid-area: info;
+    width: 100%;
+  }
+
+  .recipe__detail {
+    text-align: center;
+  }
+
+  .recipe__ingredients {
+    grid-area: ingredients;
+    width: 100%;
+  }
+
+  .recipe__instructions {
+    grid-area: instructions;
+    width: 100%;
+  }
+
+  .recipe__nutrition {
+    grid-area: nutrition;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-margin: 0;
+  }
+
+  html {
+    font-size: 70%;
+  }
+
+  body {
+    padding: 3rem 5rem;
+  }
+
+  section:not(:first-child) {
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .header__title {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .header__banner {
+    height: 40rem;
+  }
+
+  .recipe {
+    margin-top: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "info info info info" "ingredients instructions instructions nutrition";
+    gap: 4rem;
+  }
+
+  .recipe__info {
+    text-align: center;
+  }
+
+  .recipe__details {
+    gap: 4rem;
+  }
 }
