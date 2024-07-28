@@ -21,6 +21,14 @@ body {
   margin: 0 auto;
 }
 
+section {
+  margin: 2rem auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
 /* --------------------------- Header ----------------------------- */
 
 .header__title {
@@ -33,4 +41,27 @@ body {
   object-fit: cover;
   height: 15rem;
   border-radius: 10px;
+}
+
+/* --------------------------- Recipe Details ----------------------------- */
+
+.recipe__title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.recipe__details {
+  display: flex;
+  gap: 1rem;
+}
+.recipe__detail {
+  flex: 1 1 33%;
+  background-color: coral;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.recipe__detail-type {
+  margin-bottom: 0.5rem;
+}
+.recipe__detail-time {
+  font-weight: bold;
 }
